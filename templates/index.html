@@ -8,11 +8,28 @@
     <h4>Add some things to your list! 🤔</h4>
 </div><br>
 
-  <input type="text" class="form-control" placeholder="Add Item to your today's list... 🤙" >
+  <input type="text" class="form-control" placeholder="Add Item to your today's list... 🤙" />
 <br>
-    <button class="btn btn-secondary">Add Item</button>
+    <button class="btn btn-secondary">Add Item</button><br><br>
 
 
+<table class="table table-bordered table-dark table-striped table-hover">
+        <thead>
+        <tr>
+            <th>This is the list of tasks to do: 🚀</th>
+        </tr>
+        </thead>
+            <tbody>
+
+                    {% for item in todolist %}
+                        <tr>
+                            <td>{{item}}</td>
+                        </tr>
+                    {% endfor %}
+
+            </tbody>
+
+</table>
 
 
 
