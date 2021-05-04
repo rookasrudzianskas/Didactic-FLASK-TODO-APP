@@ -6,6 +6,7 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__, static_url_path="", static_folder="css/main.css")
+    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymsql://rokasusername:admin1234@db4free.net/rokasflaskprojec"
     db.init_app(app)
 
     with app.app_context():

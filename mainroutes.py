@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint, app, render_template
-
+from models import TodoList, TodoItem
 routes = Blueprint('routes', __name__)
 
 
