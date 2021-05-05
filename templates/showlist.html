@@ -16,7 +16,7 @@
 
                     {% for item in todolists %}
                         <tr>
-                            <td><a href="#">{{item.name}}</a></td>
+                            <td><a href="{{url_for('routes.viewlist', listid=item.id)}}">{{item.name}}</a></td>
                         </tr>
                     {% endfor %}
 

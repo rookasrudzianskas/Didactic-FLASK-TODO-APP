@@ -20,12 +20,12 @@ def addList():
     return redirect(url_for('routes.showLists'))
 
 
-@routes.route('/')
-def hello_world():
-    items = [
-        "Cook dinner",
-        "wash Up",
-        "Do laundry",
-        "Clean Room"
-    ]
-    return render_template("index.html", todolist=items)
+@routes.route('/list/<listid>')
+def viewlist(listid):
+    if listid is None:
+        return "ERROR"
+
+    list = TodoList.query.filter_by(id=listid).first()
+    if list is None:
+        return "ERROR"
+    return render_template("viewlist.html", todolist=list)

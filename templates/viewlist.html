@@ -6,7 +6,7 @@
 
 <br>
 <div class="">
-    <h1>Awesome TODO App 🔥 🔥!</h1>
+    <h1>{{todolist.name}} 🔥 🔥!</h1>
     <h4>Add some things to your list! 🤔</h4>
 </div><br>
 
@@ -23,9 +23,9 @@
         </thead>
             <tbody>
 
-                    {% for item in todolist %}
+                    {% for item in todolist.item %}
                         <tr>
-                            <td>{{item}}</td>
+                            <td>{{item.description}}</td>
                         </tr>
                     {% endfor %}
 
