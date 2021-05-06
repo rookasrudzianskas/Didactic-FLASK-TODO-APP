@@ -36,6 +36,7 @@
 <script>
     $("#AddItem").click(function(){
         var NewItemDescription = $("#NewItemInput").val()
+        // gets the url
         window.location.href="{{url_for('routes.addItem', listid=todolist.id, item='')}}" + NewItemDescription
     })
 </script>
