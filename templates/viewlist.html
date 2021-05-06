@@ -10,9 +10,9 @@
     <h4>Add some things to your list! 🤔</h4>
 </div><br>
 
-  <input type="text" class="form-control" placeholder="Add Item to your today's list... 🤙" />
+  <input type="text" class="form-control" placeholder="Add Item to your today's list... 🤙" id="NewItemInput" />
 <br>
-    <button class="btn btn-secondary">Add Item</button><br><br>
+    <button class="btn btn-secondary" id="AddItem">Add Item</button><br><br>
 
 
 <table class="table table-bordered table-dark table-striped table-hover">
@@ -33,7 +33,12 @@
 
 </table>
 
-
+<script>
+    $("#AddItem").click(function(){
+        var NewItemDescription = $("#NewItemInput").val()
+        window.location.href="{{url_for('routes.addItem', listid=todolist.id, item='')}}" + NewItemDescription
+    })
+</script>
 
 
 
